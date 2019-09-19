@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> Menu Here </h1>
+
+	{% for dish in menu %}
+
+		<h2>{{dish.number}}  {{ dish.name }}</h2>
+		<p>{{ dish.description }}</p>
+		<p>{{ dish.price }}</p>
+
+	{% endfor %}
+
+{% endblock content %}

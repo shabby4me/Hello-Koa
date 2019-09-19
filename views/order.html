@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> Order Here </h1>
+	<form id="order-detail" method="post" >
+	{% csrf_token %}
+		{% for dish in menu %}
+			<div  class='container' >
+				<h2>{{ dish.name }}</h2>
+				<p>{{ dish.description }}</p>
+				<p>{{ dish.price }}</p>
+				<p id={{ dish.number }}>0</p> <button padding="15px 15px" onclick="incre_count({{ dish.number }})"> + </button>
+				<input type="hidden" name={{ dish.number }}>
+			</div>
+		{% endfor %}
+		<script>
+			function incre_count(dish_number){
+				var = $("#"+dish_number)
+			}
+		</script>
+		<button type="submit"> Submit </button> 
+	</form>
+
+{% endblock content %}
