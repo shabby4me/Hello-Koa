@@ -23,10 +23,10 @@
         "nunjucks": "",
         "mime": "",
         "mz": "",
-		"sequelize": "",
-		"mysql": ""
+        "sequelize": "",
+        "mysql": ""
+    },
+    "devDependencies": {
+        "mocha": ""
     }
-	"devDependencies": {
-		"mocha": ""
-	}
 }
