@@ -22,6 +22,11 @@
         "koa-bodyparser": "",
         "nunjucks": "",
         "mime": "",
-        "mz": ""
+        "mz": "",
+		"sequelize": "",
+		"mysql": ""
     }
+	"devDependencies": {
+		"mocha": ""
+	}
 }

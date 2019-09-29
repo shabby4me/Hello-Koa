@@ -10,9 +10,23 @@ const controller = require('./controller');
 
 const nunjucks = require('nunjucks');
 
-let templating = require('./templating');
+const Sequelize = require('sequelize');
+
+const config = require('./config');
+
+const templating = require('./templating');
 
 const isProduction = process.env.NODE_ENV === 'production';
+
+var sequelize = new Sequelize(config.database, config.username, config.password, {
+	host: config=host,
+	dialect: 'mysql',
+	pool: {
+		max: 5,
+		min: 0,
+		idle: 30000
+	}
+});
 
 app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
