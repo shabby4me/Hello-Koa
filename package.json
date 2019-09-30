@@ -24,7 +24,8 @@
         "mime": "",
         "mz": "",
         "sequelize": "",
-        "mysql": ""
+        "mysql": "",
+        "mysql2": ""
     },
     "devDependencies": {
         "mocha": ""

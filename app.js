@@ -19,7 +19,7 @@ const templating = require('./templating');
 const isProduction = process.env.NODE_ENV === 'production';
 
 var sequelize = new Sequelize(config.database, config.username, config.password, {
-	host: config=host,
+	host: config.host,
 	dialect: 'mysql',
 	pool: {
 		max: 5,
