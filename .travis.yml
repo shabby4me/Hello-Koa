@@ -11,10 +11,9 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   local_dir: dpl_cd_upload
   skip_cleanup: true
-  on: &2
-    repo: shabby4me/Hello-Koa
   bucket: elasticbeanstalk-us-east-2-337419897283
   region: us-east-2
+
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
@@ -24,7 +23,7 @@ deploy:
   application: hello-koa
   deployment_group: group1-ec2
   region: us-east-2
-  on: *2
+
 script:
   - zip -r latest *
   - mkdir -p dpl_cd_upload
